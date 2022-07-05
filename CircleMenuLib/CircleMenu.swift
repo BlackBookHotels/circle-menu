@@ -188,7 +188,7 @@ open class CircleMenu: UIButton {
         buttonsAnimationIsShow(isShow: false, duration: duration, hideDelay: hideDelay)
 
         tapBounceAnimation(duration: 0.5)
-        tapRotatedAnimation(0.3, isSelected: false)
+        //tapRotatedAnimation(0.3, isSelected: false)
     }
 
     /**
@@ -346,7 +346,7 @@ open class CircleMenu: UIButton {
         buttonsAnimationIsShow(isShow: isShow, duration: duration)
 
         tapBounceAnimation(duration: 0.5) { [weak self] _ in self?.isBounceAnimating = false }
-        tapRotatedAnimation(0.3, isSelected: isShow)
+        //tapRotatedAnimation(0.3, isSelected: isShow)
     }
 
     @objc func buttonHandler(_ sender: CircleMenuButton) {
@@ -380,7 +380,7 @@ open class CircleMenu: UIButton {
         }
 
         hideCenterButton(duration: 0.3)
-        showCenterButton(duration: 0.525, delay: duration)
+        //showCenterButton(duration: 0.525, delay: duration)
 
         DispatchQueue.main.asyncAfter(deadline: .now() + duration, execute: {
             self.delegate?.circleMenu?(self, buttonDidSelected: sender, atIndex: sender.tag)
